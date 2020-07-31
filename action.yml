@@ -1,0 +1,21 @@
+name: 'Setup APT'
+description: 'Install sources and packages using APT'
+inputs:
+  sources:
+    description: 'sources to add to sources.list'
+    required: false
+    default: ""
+  packages:
+    description: 'packages to be installed'
+    required: false
+    default: ""
+  update:
+    description: 'whether to run apt-get update'
+    required: false
+    default: true
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+branding:
+  color: 'red'
+  icon: 'package'
